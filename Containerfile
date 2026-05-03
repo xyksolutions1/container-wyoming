@@ -5,16 +5,16 @@
 ARG \
     BASE_IMAGE
 
-FROM ${BASE_IMAGE}
+FROM docker.io/xyksolutions1/container-base:latest
 
 LABEL \
         org.opencontainers.image.title="Wyoming" \
         org.opencontainers.image.description="SST and TTS tools" \
-        org.opencontainers.image.url="https://hub.docker.com/r/nfrastack/wyoming" \
-        org.opencontainers.image.documentation="https://github.com/nfrastack/container-wyoming/blob/main/README.md" \
-        org.opencontainers.image.source="https://github.com/nfrastack/container-wyoming.git" \
-        org.opencontainers.image.authors="Nfrastack <code@nfrastack.com>" \
-        org.opencontainers.image.vendor="Nfrastack <https://www.nfrastack.com>" \
+        org.opencontainers.image.url="https://hub.docker.com/r/xyksolutions1/wyoming" \
+        org.opencontainers.image.documentation="https://github.com/xyksolutions1/container-wyoming/blob/main/README.md" \
+        org.opencontainers.image.source="https://github.com/xyksolutions1/container-wyoming.git" \
+        org.opencontainers.image.authors="xyksolutions1" \
+        org.opencontainers.image.vendor="xyksolutions1" \
         org.opencontainers.image.licenses="MIT"
 
 ARG \
@@ -45,8 +45,8 @@ ENV \
     WHISPER_USER=${WHISPER_USER:-"whisper"} \
     WHISPER_GROUP=${WHISPER_GROUP:-"wyoming"} \
     CONTAINER_ENABLE_SCHEDULING=TRUE \
-    IMAGE_NAME="nfrastack/wyoming" \
-    IMAGE_REPO_URL="https://github.com/nfrastack/container-wyoming/"
+    IMAGE_NAME="xyksolutions1/wyoming" \
+    IMAGE_REPO_URL="https://github.com/xyksolutions1/container-wyoming/"
 
 RUN echo "" && \
     WYOMING_BUILD_DEPS_DEBIAN=" \
